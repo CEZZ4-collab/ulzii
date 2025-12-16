@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Read Novel</title>
+
+  <style>
+    body{
+      margin:0;
+      background:#0b0b0b;
+      color:#eaeaea;
+      font-family: Georgia, serif;
+      line-height:1.9;
+    }
+
+    /* Top reader bar */
+    .reader-header{
+      position:sticky;
+      top:0;
+      z-index:10;
+      background:rgba(0,0,0,.85);
+      backdrop-filter:blur(8px);
+      padding:16px 8%;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      border-bottom:1px solid rgba(255,255,255,.08);
+    }
+
+    .reader-header h1{
+      font-size:1.2rem;
+      margin:0;
+      font-weight:600;
+    }
+
+    .reader-controls button{
+      background:rgba(255,255,255,.1);
+      border:none;
+      color:#fff;
+      padding:6px 10px;
+      border-radius:8px;
+      margin-left:6px;
+      cursor:pointer;
+    }
+
+    /* Reading area */
+    .reader{
+      max-width:820px;
+      margin:60px auto;
+      padding:0 20px;
+    }
+
+    .novel-title{
+      font-size:2.6rem;
+      margin-bottom:6px;
+    }
+
+    .novel-info{
+      color:#bdbdbd;
+      font-size:.95rem;
+      margin-bottom:40px;
+    }
+
+    .content p{
+      margin-bottom:26px;
+      font-size:1.15rem;
+    }
+
+    /* Chapter navigation */
+    .chapter-nav{
+      display:flex;
+      justify-content:space-between;
+      margin:70px 0;
+    }
+
+    .chapter-nav a{
+      text-decoration:none;
+      padding:12px 20px;
+      border-radius:14px;
+      font-weight:600;
+    }
+
+    .prev{
+      background:rgba(255,255,255,.12);
+      color:#fff;
+    }
+
+    .next{
+      background:#fff;
+      color:#000;
+    }
+
+    @media(max-width:768px){
+      .novel-title{font-size:2rem}
+      .reader{margin:40px auto}
+    }
+  </style>
+  <link rel="stylesheet" href="minii web.css">
+</head>
+<body>
+
+<div class="reader-header">
+  <a href="zohiolNuur.html"><h1>C.NOVEL</h1></a>
+  <div class="reader-controls">
+    <button>🌙</button>
+    <button>A-</button>
+    <button>A+</button>
+  </div>
+</div>
+
+<div class="reader">
+  <div class="novel-title">Зохиолын нэр</div>
+  <div class="novel-info">Зохиолчийн нэр · Chapter 1</div>
+
+  <div class="content">
+    <p>
+      Шөнө дөл өнгөрч, хотын гэрлүүд анивчих тэр мөчид
+      түүний түүх эхэлсэн юм. Салхи намуухан үлээж,
+      бодол бүр нь өнгөрсөн дурсамжийг санагдуулна.
+    </p>
+
+    <p>
+      Тэр энэ мөчийг мартахгүй гэдгээ мэдэж байлаа.
+      Учир нь эндээс л бүх зүйл өөрчлөгдөх байв.
+    </p>
+  </div>
+
+
+  <div class="chapter-nav">
+    <a href="#" class="prev">← Previous</a>
+    <a href="#" class="next">Next →</a>
+  </div>
+</div>
+
+</body>
+</html>

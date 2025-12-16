@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>C.NOVEL</title>
+  <link rel="stylesheet" href="minii web.css">
+   <header>
+    <div class="logo">
+     <a href="index.html"> <img src="Boat.gif.gif" width="50" height="30" />
+      C.NOVEL</a>
+    </div>
+    <nav>
+      <a href="Zohiol ehnii nuurnii.html">Novel</a>
+      <a href="Login 2.html">Character</a>
+      <a href="Login 2.html">login</a>
+      <a href="About.html">about</a>
+      <a href="contact.html">contact</a>
+    </nav>
+  </header>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: 'Times New Roman', Times, serif;
+      background: #000;
+      color: #fff;
+    }
+    .about-section {
+      position: relative;
+      min-height: 100vh;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 80px 10%;
+    }
+    .about-section iframe {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+      z-index: 0;
+    }
+
+    .about-overlay {
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at right, rgba(255,255,255,0.08), rgba(0,0,0,0.85) 60%);
+      z-index: 1;
+    }
+    .about-content {
+      position: relative;
+      z-index: 2;
+      max-width: 900px;
+      text-align: left;
+    }
+
+    .about-content h2 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+      letter-spacing: 1px;
+    }
+
+    .about-content p {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      color: #e0e0e0;
+      margin-bottom: 20px;
+    }
+
+    .about-stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 20px;
+      margin-top: 40px;
+    }
+
+    .stat-card {
+      background: rgba(255,255,255,0.06);
+      border-radius: 16px;
+      padding: 20px;
+      backdrop-filter: blur(8px);
+      transition: transform 0.3s ease, background 0.3s ease;
+    }
+
+    .stat-card:hover {
+      transform: translateY(-6px);
+      background: rgba(255,255,255,0.12);
+    }
+
+    .stat-card h3 {
+      font-size: 1.8rem;
+      margin: 0 0 10px;
+    }
+
+    .stat-card span {
+      font-size: 0.95rem;
+      color: #bdbdbd;
+    }
+
+    @media (max-width: 768px) {
+      .about-content h2 { font-size: 2.2rem; }
+      .about-section { padding: 60px 6%; }
+    }
+  </style>
+</head>
+<body>
+
+<section class="about-section">
+   <script type="module" src="https://unpkg.com/@splinetool/viewer@1.12.6/build/spline-viewer.js"></script>
+<spline-viewer url="https://prod.spline.design/PlQ20ndfLf2FyDEm/scene.splinecode"></spline-viewer>
+
+  <div class="about-overlay"></div>
+
+  <div class="about-content">
+    <h2>C.NOVEL</h2>
+    <p>
+      C.NOVEL нь зохиолч, уншигч, уран сэтгэмжийг нэг дор холбох орчин үеийн онлайн платформ юм.
+      Энд та өөрийн зохиол, түүх, дүрүүдийг бүтээж, дэлхий даяарх уншигчидтай хуваалцах боломжтой.
+    </p>
+    <p>
+      Бид технологи ба уран зохиолыг нэгтгэж, бүтээлч хүмүүсийн дуу хоолойг илүү тод
+      хүргэх зорилготой. Spline 3D орчин, минимал дизайн нь таны төсөөллийг илүү амьд болгоно.
+    </p>
+
+    <div class="about-stats">
+      <div class="stat-card">
+        <h3>100+</h3>
+        <span>Нийтлэгдсэн зохиол</span>
+      </div>
+      <div class="stat-card">
+        <h3>50+</h3>
+        <span>Идэвхтэй зохиолч</span>
+      </div>
+      <div class="stat-card">
+        <h3>∞</h3>
+        <span>Төсөөллийн боломж</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>

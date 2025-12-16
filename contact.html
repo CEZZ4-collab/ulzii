@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="minii web.css">
+</head>
+   <header>
+    <div class="logo">
+     <a href="index.html"> <img src="Boat.gif.gif" width="50" height="30" />
+      C.NOVEL</a>
+    </div>
+    <nav>
+      <a href="Zohiol ehnii nuurnii.html">Novel</a>
+      <a href="Login 2.html">Character</a>
+      <a href="Login 2.html">login</a>
+      <a href="About.html">about</a>
+      <a href="contact.html">contact</a>
+    </nav>
+  </header>
+<body bgcolor="black">
+    <section class="contact-section" id="contact">
+ <script type="module" src="https://unpkg.com/@splinetool/viewer@1.12.6/build/spline-viewer.js"></script>
+<spline-viewer url="https://prod.spline.design/PlQ20ndfLf2FyDEm/scene.splinecode"></spline-viewer>
+  <div class="contact-overlay"></div>
+  <div class="contact-box">
+    <h2>Contact</h2>
+    <p>
+      Асуулт, санал хүсэлт, хамтын ажиллагааны талаар
+      бидэнтэй холбогдоорой.
+    </p>
+
+    <form class="contact-form">
+      <input type="text" placeholder="Нэр" required>
+      <input type="email" placeholder="Имэйл" required>
+      <textarea rows="5" placeholder="Мессеж" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+</section>
+<style>
+    .contact-section{
+        
+  position:relative;
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  overflow:hidden;
+  padding:80px 10%;
+}
+
+.contact-section iframe{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  border:none;
+  z-index:0;
+}
+
+.contact-overlay{
+  position:absolute;
+  inset:0;
+  background:rgba(0,0,0,0.75);
+  z-index:1;
+}
+
+.contact-box{
+  position:relative;
+  z-index:2;
+  max-width:520px;
+  width:100%;
+  background:rgba(255,255,255,0.06);
+  backdrop-filter:blur(12px);
+  border-radius:20px;
+  padding:40px;
+  color:#fff;
+}
+
+.contact-box h2{
+    font-family: 'Times New Roman', Times, serif;
+  font-size:2.4rem;
+  margin-bottom:10px;
+}
+
+.contact-box p{
+  color:#cfcfcf;
+  margin-bottom:24px;
+  line-height:1.6;
+}
+
+.contact-form input,
+.contact-form textarea{
+  width:100%;
+  padding:14px 16px;
+  margin-bottom:14px;
+  border:none;
+  border-radius:12px;
+  outline:none;
+  background:black;
+  color:#fff;
+  font-size:1rem;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder{
+  color:#bdbdbd;
+}
+
+.contact-form button{
+  width:100%;
+  padding:14px;
+  border-radius:14px;
+  border:none;
+  font-weight:600;
+  cursor:pointer;
+  background:#fff;
+  color:#000;
+  transition:0.3s;
+}
+
+.contact-form button:hover{
+  transform:translateY(-3px);
+  box-shadow:0 10px 25px rgba(0,0,0,0.4);
+}
+
+</style>
+</body>
+</html>
