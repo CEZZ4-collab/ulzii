@@ -1,210 +1,38 @@
 <!DOCTYPE html>
 <html lang="mn">
 <head>
-    <meta charset="UTF-8">
-    <title>STANDOFF2 2 PRIME FACEIT</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <style>
-        /* Өнгөлсөн, орчин үеийн стиль — зөвхөн CSS өөрчлөлт */
-        :root{
-            --bg-900: #0b0f1a;
-            --bg-800: #0f1724;
-            --card: rgba(255,255,255,0.04);
-            --muted: rgba(255,255,255,0.65);
-            --accent-1: #ff6b6b;   /* халуун ягаан-улаан */
-            --accent-2: #ffb86b;   /* шаргал */
-            --accent-3: #6b9bff;   /* цэнхэр */
-            --glass: rgba(255,255,255,0.03);
-        }
-
-        *{box-sizing:border-box}
-        html,body{height:100%;}
-        body {
-            font-family: "Inter", "Segoe UI", Arial, sans-serif;
-            background:
-              radial-gradient(1200px 500px at 10% 10%, rgba(107,155,255,0.06), transparent 8%),
-              radial-gradient(1000px 500px at 90% 90%, rgba(255,107,107,0.04), transparent 10%),
-              linear-gradient(180deg,var(--bg-900) 0%, var(--bg-800) 100%);
-            color: #eaf2ff;
-            margin: 0;
-            -webkit-font-smoothing:antialiased;
-            -moz-osx-font-smoothing:grayscale;
-        }
-
-        /* Header */
-        .header {
-            backdrop-filter: blur(6px);
-            background: linear-gradient(90deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
-            border-bottom: 1px solid rgba(255,255,255,0.03);
-            padding: 14px 28px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: 16px;
-            position: sticky;
-            top: 0;
-            z-index: 40;
-        }
-
-        .logo {
-            display:flex;
-            gap:12px;
-            align-items:center;
-            font-size:20px;
-            font-weight:800;
-            letter-spacing:0.6px;
-            color: transparent;
-            background: linear-gradient(90deg,var(--accent-1),var(--accent-2));
-            -webkit-background-clip: text;
-            background-clip: text;
-        }
-        .logo .dot {
-            width:12px;height:12px;border-radius:4px;background:linear-gradient(45deg,var(--accent-3),var(--accent-1));
-            box-shadow:0 6px 18px rgba(107,155,255,0.08), inset 0 -4px 8px rgba(0,0,0,0.2);
-        }
-
-        .nav { display:flex; gap:12px; align-items:center; }
-        .nav a {
-            color:var(--muted);
-            text-decoration:none;
-            padding:8px 12px;
-            border-radius:8px;
-            transition: all .18s ease;
-            font-weight:600;
-            font-size:14px;
-        }
-        .nav a:hover{
-            color:#fff;
-            transform:translateY(-2px);
-            background:linear-gradient(90deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
-            box-shadow: 0 6px 20px rgba(11,17,26,0.6);
-        }
-
-        /* Main */
-        .container { max-width:1200px; margin:26px auto; padding:24px; }
-        .main-content { padding:36px; text-align:center; border-radius:14px; background: linear-gradient(180deg, rgba(255,255,255,0.01), transparent); border:1px solid rgba(255,255,255,0.03); box-shadow: 0 10px 40px rgba(2,6,23,0.6); }
-
-        h1 { font-size:36px; margin:8px 0 10px; letter-spacing:0.4px; }
-        p { margin:0 auto; max-width:760px; color:var(--muted); font-size:16px; }
-
-        /* Play button */
-        .play-wrap{margin-top:20px}
-        .play-button {
-            display:inline-flex;
-            align-items:center;
-            gap:12px;
-            background: linear-gradient(90deg,var(--accent-1),var(--accent-2));
-            color:#081020;
-            padding:14px 26px;
-            font-size:18px;
-            border:none;
-            cursor:pointer;
-            border-radius:10px;
-            font-weight:800;
-            box-shadow: 0 10px 30px rgba(255,107,107,0.12), 0 2px 6px rgba(0,0,0,0.5);
-            transition:transform .14s ease, box-shadow .14s ease;
-            text-decoration:none;
-        }
-        .play-button:hover{ transform:translateY(-4px); box-shadow: 0 18px 40px rgba(255,107,107,0.18); }
-
-        .play-button .icon {
-            width:36px;height:36px;border-radius:8px;background:rgba(255,255,255,0.9);display:inline-grid;place-items:center;font-weight:800;color:#ff6b6b;
-        }
-
-        /* Stats grid */
-        .stats-grid {
-            display:flex;
-            justify-content:space-between;
-            gap:18px;
-            margin-top:28px;
-            align-items:stretch;
-            flex-wrap:wrap;
-        }
-        .stat-box {
-            background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
-            padding:20px;
-            border-radius:12px;
-            width:calc(33.333% - 12px);
-            min-width:180px;
-            border:1px solid rgba(255,255,255,0.03);
-            box-shadow: 0 6px 18px rgba(2,6,23,0.6);
-            transition: transform .12s ease;
-        }
-        .stat-box:hover{ transform: translateY(-6px); }
-        .stat-box h2 { font-size:22px; margin:0 0 6px; color: #fff; }
-        .stat-box p { margin:0; color:var(--muted); font-weight:600; font-size:13px }
-
-        /* Accent badges */
-        .badge {
-            display:inline-block;
-            padding:6px 10px;
-            border-radius:999px;
-            font-weight:700;
-            font-size:12px;
-            color:#081020;
-            background: linear-gradient(90deg,var(--accent-3),var(--accent-2));
-            box-shadow: 0 6px 20px rgba(107,155,255,0.06);
-        }
-
-        /* Responsive */
-        @media (max-width:900px){
-            .stats-grid{flex-direction:column; width:100%}
-            .stat-box{width:100%}
-            .nav a{display:none}
-            .logo{font-size:18px}
-        }
-
-        /* tiny footer spacing */
-        .footer-note{margin-top:20px;color:var(--muted);font-size:13px}
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>You Think</title>
+  <link rel="stylesheet" href="minii web.css">
 </head>
 <body>
-    <header class="header">
-        <div class="logo"><span class="dot"></span> STANDOFF 2 PRIME FACEIT</div>
-        <nav class="nav">
-            <a href="#">Чансаа (Rankings)</a>
-            <a href="#">Тэмцээн (Tournaments)</a>
-            <a href="#">Миний Профайл (My Profile)</a>
-            <a href="#">Нэвтрэх (Login)</a>
-        </nav>
-    </header>
-
-    <div class="container">
-      <main class="main-content">
-<<<<<<< HEAD
-          <h1>STANDOFF 2 PRIME FACEIT</h1>
-=======
-          <h1>Standoff 2 Faceit</h1>
->>>>>>> 477c2190424a316ed7b6dc6e27dda025c19605d2
-          <p>Илүү сайн сервер, луйврын эсрэг систем, шударга тоглоомын туршлагыг мэдрээрэй.</p>
-
-          <div class="play-wrap">
-              <a class="play-button" href="FACEIT 2.html">
-                  <span class="icon">▶</span>
-                  <span>Play Match</span>
-              </a>
-          </div>
-
-          <section class="stats-grid" aria-label="site statistics">
-              <div class="stat-box">
-                  <h2>150,000+</h2>
-                  <p>Идэвхтэй Тоглогч</p>
-                  <div style="margin-top:10px"><span class="badge">LIVE</span></div>
-              </div>
-              <div class="stat-box">
-                  <h2>STANDOFF 2 LOBBY</h2>
-                  <p>lobby Үүсгэх</p>
-                  <div style="margin-top:10px"><span class="badge" style="background:linear-gradient(90deg,var(--accent-1),#ff8a8a)">PRO</span></div>
-              </div>
-              <div class="stat-box">
-                  <h2>PRO LEAGUE</h2>
-                  <p>Туршилтын Лигүүд</p>
-                  <div style="margin-top:10px"><span class="badge" style="background:linear-gradient(90deg,#7af6a8,#6b9bff)">RANKED</span></div>
-              </div>
-          </section>
-
-          <div class="footer-note">© 2025 STANDOFF 2 PRIME — Бүх эрх хуулиар хамгаалагдсан.</div>
-      </main>
+  <header>
+    <div class="logo">
+      <img src="Boat.gif.gif" width="50" height="30" />
+      C.NOVEL
     </div>
+    <nav>
+      <a href="#">Novel</a>
+      <a href="#">Character</a>
+      <a href="Login 2.html">login</a>
+      <a href="#">about</a>
+      <a href="#">contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-text">
+      <h1>We Can Now<br>Share Our Writing And Imagination<br>With The World</h1>
+      <p>
+        Манай сайт нь хүн бүрт өөрийн зохиол өгүүллэг<br> шүлэг туужаа өөрийн гараар бичиж
+         нийтлэх боломжийг олгодог онлайн платформ юм.
+      </p>
+      <a href="Login 2.html"><button class="btn">START</button></a>
+    </div>
+   <script type="module" src="https://unpkg.com/@splinetool/viewer@1.12.6/build/spline-viewer.js"></script>
+<spline-viewer url="https://prod.spline.design/PlQ20ndfLf2FyDEm/scene.splinecode"></spline-viewer>
+    </div>
+  </section>
 </body>
 </html>
