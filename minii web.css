@@ -1,0 +1,205 @@
+ body {
+      margin: 0;
+      font-family: "Poppins", 'Times New Roman', Times, serif;
+      background: #050505;
+      color: white;
+      overflow-x: hidden;
+    }
+    header {
+      width: 100%;
+      padding: 25px 70px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-sizing: border-box;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 20px;
+      font-weight: 600;
+    }
+    nav a {
+      font-family: 'Times New Roman', Times, serif;
+      margin-left: 35px;
+      text-decoration: none;
+      color: #cfcfcf;
+      font-size: 24px;
+      transition: 0.3s;
+    }
+    nav a:hover {
+      color: white;
+    }
+
+    .hero {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 120px 70px;
+      box-sizing: border-box;
+    }
+
+    .hero-text {
+      max-width: 520px;
+    }
+
+    .hero-text h1 {
+      font-size: 42px;
+      line-height: 1.3em;
+      font-weight: 700;
+    }
+
+    .hero-text p {
+      margin: 20px 0 40px;
+      color: #bcbcbc;
+      line-height: 1.6em;
+    }
+
+    .btn {
+      font-family: 'Times New Roman', Times, serif;
+      padding: 14px 38px;
+      background: white;
+      color: black;
+      border-radius: 8px;
+      font-size: 15px;
+      font-weight: 600;
+      border: none;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+    }
+    .spline-box {
+      width: 1000px;
+      height: 1000px;
+      overflow: hidden;
+    }
+
+    .spline-box iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+  
+    .writer {
+  width: 100%;
+  min-height: 100vh;
+  padding: 120px 70px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.writer-box {
+  width: 100%;
+  max-width: 900px;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 16px;
+  padding: 45px 50px;
+}
+
+.writer-box h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.writer-box p {
+  color: #bcbcbc;
+  margin-bottom: 35px;
+}
+
+.writer-box input {
+  width: 100%;
+  padding: 14px 16px;
+  margin-bottom: 20px;
+  background: #0c0c0c;
+  border: 1px solid #222;
+  border-radius: 8px;
+  color: white;
+  font-size: 15px;
+  outline: none;
+}
+
+.writer-box textarea {
+  width: 100%;
+  min-height: 320px;
+  padding: 16px;
+  background: #0c0c0c;
+  border: 1px solid #222;
+  border-radius: 10px;
+  color: white;
+  font-size: 15px;
+  line-height: 1.7;
+  resize: vertical;
+  outline: none;
+}
+
+.writer-actions {
+  display: flex;
+  gap: 20px;
+  margin-top: 25px;
+}
+
+.writer-actions button {
+  padding: 14px 36px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.writer-actions button[type="submit"] {
+  background: white;
+  color: black;
+}
+
+.writer-actions .draft {
+  background: transparent;
+  color: white;
+  border: 1px solid white;
+}
+a{
+  text-decoration: none;
+  font-family: 'Times New Roman', Times, serif;
+  color: white;
+}
+/*chara novel hesg*/
+.manga-card {
+  
+        margin-left: 50px;
+      margin-top: 50px;
+      width: 250px;
+      background: #151515;
+      border-radius: 12px;
+      overflow: hidden;
+      transition: 0.2s;
+      cursor: pointer;
+    }
+    .manga-card:hover {
+      transform: scale(1.05);
+    }
+    .manga-card img {
+      width: 100%;
+      height: 240px;
+      object-fit: cover;
+    }
+    .manga-info {
+      padding: 10px;
+    }
+    .manga-info h3 {
+      font-size: 15px;
+      margin: 5px 0;
+    }
+    .langs {
+      font-size: 12px;
+      opacity: 0.7;
+    }
+.canga{
+  display: flex;
+}
+button{
+  font-family: 'Times New Roman', Times, serif;
+}

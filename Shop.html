@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Novel</title>
+  <style>
+    body {
+      margin: 0;
+      background: #0d0d0d;
+      font-family: Arial, sans-serif;
+      color: white;
+    }
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px;
+      background: #111;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    header nav a {
+      margin: 0 15px;
+      color: #ddd;
+      text-decoration: none;
+      font-size: 15px;
+    }
+    .search-box input {
+      background: #222;
+      border: 1px solid #444;
+      padding: 8px 12px;
+      border-radius: 6px;
+      color: white;
+    }
+    .section-title {
+      padding: 20px 40px;
+      font-size: 28px;
+      font-weight: bold;
+    }
+    .manga-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 25px;
+      padding: 0 40px 60px;
+    }
+    .manga-card {
+      background: #151515;
+      border-radius: 12px;
+      overflow: hidden;
+      transition: 0.2s;
+      cursor: pointer;
+    }
+    .manga-card:hover {
+      transform: scale(1.05);
+    }
+    .manga-card img {
+      width: 100%;
+      height: 240px;
+      object-fit: cover;
+    }
+    .manga-info {
+      padding: 10px;
+    }
+    .manga-info h3 {
+      font-size: 15px;
+      margin: 5px 0;
+    }
+    .langs {
+      font-size: 12px;
+      opacity: 0.7;
+    }
+    header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 40px;
+  background: rgba(15, 15, 15, 0.8);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.logo {
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #ff3366;
+}
+
+.nav-links {
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links a {
+  color: #ddd;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+  position: relative;
+  padding: 6px 0;
+  transition: 0.25s ease;
+}
+
+/* Hover underline animation */
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 0%;
+  height: 2px;
+  background: #ff3366;
+  border-radius: 4px;
+  transition: width 0.25s ease;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+.nav-links a:hover {
+  color: white;
+}
+
+.search-box input {
+  background: #1c1c1c;
+  border: 1px solid #333;
+  padding: 8px 12px;
+  border-radius: 8px;
+  color: #fff;
+  transition: 0.25s;
+}
+
+.search-box input:focus {
+  border-color: #ff3366;
+  outline: none;
+  box-shadow: 0 0 5px #ff336660;
+}
+
+  </style>
+</head>
+<body>
+
+<header>
+   <div class="logo">NOVEL</div>
+
+  <nav class="nav-links">
+    <a href="#">Updates</a>
+    <a href="#">Featured</a>
+    <a href="#">Ranking</a>
+    <a href="#">Novel List</a>
+    <a href="#">Creators</a>
+    <a href="#">Favorite</a>
+    <a href="#">About Us</a>
+  </nav>
+
+  <div class="search-box">
+    <input type="text" placeholder="Search..." />
+  </div>
+</header>
+
+<div class="section-title">Ongoing</div>
+
+<div class="manga-grid">
+  <div class="manga-card">
+    <img src="https://i.imgur.com/m8C7Z8O.jpeg" />
+    <div class="manga-info">
+      <h3>Akane-banashi</h3>
+      <div class="langs">EN • FR • ES • TH</div>
+    </div>
+  </div>
+
+  <div class="manga-card">
+    <img src="https://i.imgur.com/ZCwFn5y.jpeg" />
+    <div class="manga-info">
+      <h3>Aliens, Baseball, and...</h3>
+      <div class="langs">EN</div>
+    </div>
+  </div>
+
+  <div class="manga-card">
+    <img src="https://i.imgur.com/slJ4D0s.jpeg" />
+    <div class="manga-info">
+      <h3>Black Clover</h3>
+      <div class="langs">EN • RU • ES</div>
+    </div>
+  </div>
+
+  <div class="manga-card">
+    <img src="https://i.imgur.com/JpYjH5j.jpeg" />
+    <div class="manga-info">
+      <h3>Blood Wing Hunter</h3>
+      <div class="langs">EN</div>
+    </div>
+  </div>
+   <div class="manga-card">
+    <img src="https://i.imgur.com/JpYjH5j.jpeg" />
+    <div class="manga-info">
+      <h3>Blood Wing Hunter</h3>
+      <div class="langs">EN</div>
+    </div>
+  </div>
+   <div class="manga-card">
+    <img src="https://i.imgur.com/JpYjH5j.jpeg" />
+    <div class="manga-info">
+      <h3>Blood Wing Hunter</h3>
+      <div class="langs">EN</div>
+    </div>
+  </div>
+   <div class="manga-card">
+    <img src="https://i.imgur.com/JpYjH5j.jpeg" />
+    <div class="manga-info">
+      <h3>Blood Wing Hunter</h3>
+      <div class="langs">EN</div>
+    </div>
+  </div>
+   <div class="manga-card">
+    <img src="https://i.imgur.com/JpYjH5j.jpeg" />
+    <div class="manga-info">
+      <h3>Blood Wing Hunter</h3>
+      <div class="langs">EN</div>
+    </div>
+  </div>
+   <div class="manga-card">
+    <img src="https://i.imgur.com/JpYjH5j.jpeg" />
+    <div class="manga-info">
+      <h3>Blood Wing Hunter</h3>
+      <div class="langs">EN</div>
+    </div>
+  </div>
+   <div class="manga-card">
+    <img src="https://i.imgur.com/JpYjH5j.jpeg" />
+    <div class="manga-info">
+      <h3>Blood Wing Hunter</h3>
+      <div class="langs">EN</div>
+    </div>
+  </div>
+   <div class="manga-card">
+    <img src="https://i.imgur.com/JpYjH5j.jpeg" />
+    <div class="manga-info">
+      <h3>Blood Wing Hunter</h3>
+      <div class="langs">EN</div>
+    </div>
+  </div>
+   <div class="manga-card">
+    <img src="https://i.imgur.com/JpYjH5j.jpeg" />
+    <div class="manga-info">
+      <h3>Blood Wing Hunter</h3>
+      <div class="langs">EN</div>
+    </div>
+  </div>
+   <div class="manga-card">
+    <img src="https://i.imgur.com/JpYjH5j.jpeg" />
+    <div class="manga-info">
+      <h3>Blood Wing Hunter</h3>
+      <div class="langs">EN</div>
+    </div>
+  </div>
+   <div class="manga-card">
+    <img src="https://i.imgur.com/JpYjH5j.jpeg" />
+    <div class="manga-info">
+      <h3>Blood Wing Hunter</h3>
+      <div class="langs">EN</div>
+    </div>
+  </div>
+   <div class="manga-card">
+    <img src="https://i.imgur.com/JpYjH5j.jpeg" />
+    <div class="manga-info">
+      <h3>Blood Wing Hunter</h3>
+      <div class="langs">EN</div>
+    </div>
+  </div>
+   <div class="manga-card">
+    <img src="https://i.imgur.com/JpYjH5j.jpeg" />
+    <div class="manga-info">
+      <h3>Blood Wing Hunter</h3>
+      <div class="langs">EN</div>
+    </div>
+  </div>
+    <div class="manga-card">
+    <img src="https://i.imgur.com/JpYjH5j.jpeg" />
+    <div class="manga-info">
+      <h3>Blood Wing Hunter</h3>
+      <div class="langs">EN</div>
+    </div>
+  </div>
+    <div class="manga-card">
+    <img src="https://i.imgur.com/JpYjH5j.jpeg" />
+    <div class="manga-info">
+      <h3>Blood Wing Hunter</h3>
+      <div class="langs">EN</div>
+    </div>
+  </div>
+    <div class="manga-card">
+    <img src="https://i.imgur.com/JpYjH5j.jpeg" />
+    <div class="manga-info">
+      <h3>Blood Wing Hunter</h3>
+      <div class="langs">EN</div>
+    </div>
+  </div>  <div class="manga-card">
+    <img src="https://i.imgur.com/JpYjH5j.jpeg" />
+    <div class="manga-info">
+      <h3>Blood Wing Hunter</h3>
+      <div class="langs">EN</div>
+    </div>
+  </div>
+    <div class="manga-card">
+    <img src="https://i.imgur.com/JpYjH5j.jpeg" />
+    <div class="manga-info">
+      <h3>Blood Wing Hunter</h3>
+      <div class="langs">EN</div>
+    </div>
+  </div>
+  
+  
+</div>
+
+</body>
+</html>

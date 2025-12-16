@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+  <meta charset="UTF-8">
+  <title>C.NOVEL – Зохиол бичих</title>
+  <link rel="stylesheet" href="minii web.css">
+</head>
+<body>
+
+<header>
+  <div class="logo">
+   <a href="zohiolNuur.html"><img src="Boat.gif.gif" width="50" height="30" />
+    C.NOVEL</a>
+  </div>
+  <nav>
+      <a href="Novel.html">Novel</a>
+      <a href="Characters.html">Character</a>
+      <a href="zohiol.html">Write</a>
+      <a href="#">Popular</a>
+      <a href="#">wallet : 100 $</a>&nbsp;&nbsp;
+      <a>Uchka &nbsp;<img src="happy.gif" width="30" height="30" />
+      </a>
+  </nav>
+</header>
+
+<section class="writer">
+
+  <div class="writer-box">
+    <h1>Зохиол бичих</h1>
+    <p>Таны бодол үг болж, үг бүтээл болно.</p>
+
+    <form id="storyForm">
+      <input type="text" placeholder="Зохиолын гарчиг" required>
+
+      <textarea placeholder="Энд зохиолоо бичнэ үү..." required></textarea>
+
+      <div class="writer-actions">
+        <button type="submit">Нийтлэх</button>
+        <button type="reset" class="draft">Цэвэрлэх</button>
+      </div>
+    </form>
+  </div>
+
+</section>
+
+<script>
+  document.getElementById("storyForm").addEventListener("submit", e => {
+    e.preventDefault();
+    alert("Зохиол амжилттай нийтлэгдлээ! (demo)");
+  });
+</script>
+
+</body>
+</html>
